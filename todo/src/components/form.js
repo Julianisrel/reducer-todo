@@ -6,7 +6,7 @@ const AddTodo = (props) => {
     <input 
         class="form-control" 
         type="text" 
-        placeholder="Things u gotta do!"></input>
+        placeholder="Things I have to do!"></input>
     </div>
     );
 }

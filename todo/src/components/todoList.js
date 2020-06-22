@@ -5,7 +5,7 @@ const TodoList = (props) => {
     return ( 
     <ul class="list-group">
 
-    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">listy list</li>
   
   </ul> );
 }

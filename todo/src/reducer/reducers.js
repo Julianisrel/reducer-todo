@@ -1,6 +1,6 @@
 export const todo =  [
     {
-        item: 'Study Reducers',
+        item: 'learn about Reducers',
         completed: false,
         id: Date.now()
     }
@@ -9,10 +9,10 @@ export const todo =  [
 export const reducer = (state, action) => {
     switch(action.tyoe){
         case 'ADD_TODO': 
-            return[
+            return(
                 ...state,
                 {item: action.payload, completed:false, id: Date.now()}
-                ]
+                )
         
         case 'TODO_COMPLETED':
             return state.map(todo => {
