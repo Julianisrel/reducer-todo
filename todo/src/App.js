@@ -1,15 +1,15 @@
 import React, { useReducer } from "react";
-import { TodoForm } from "./component/TodoForm";
-import { TodoList } from "./component/TodoList";
-// import "./component/Todo.css";
-import { initialState, reducer } from "./reducers/reducer";
+import { TodoForm } from "./components/TodoForm";
+import { TodoList } from "./components/TodoList";
+// import "./components/Todo.css";
+import { initialState, reducer } from "./reducer/reducer";
 
 function App() {
-  // Declare state and dispatch with reducer (form functions)
+  // declare state and dispatch with reducer (form functions)
   const [state, dispatch] = useReducer(reducer, initialState);
   console.log(state);
 
-  // Actions, calling to the reducer functions through dispatch to manipulate the state
+  // actions, calling to the reducer functions through dispatch to manipulate the state
   const addTodo = (input) => {
     const newTodo = {
       todo: input,
