@@ -1,13 +1,20 @@
-import React, { Component } from 'react';
+import React from "react";
+import { Todo } from "./Todo";
 
+export function TodoList(props) {
+  //consol.log("TodoList.js ~ ", props);
 
-const TodoList = (props) => {
-    return ( 
-    <ul class="list-group">
-
-    <li class="list-group-item">Cras justo odio</li>
-  
-  </ul> );
+  return (
+    <div className="list">
+      {props.state.map((item) => {
+        return (
+          <Todo
+            item={item}
+            key={item.id}
+            handleComplete={props.handleComplete}
+          />
+        );
+      })}
+    </div>
+  );
 }
- 
-export default TodoList;

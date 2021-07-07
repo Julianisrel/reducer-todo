@@ -1,23 +1,19 @@
-iimport React from 'react';
+import React from "react";
 
+export function Todo(props) {
+  //console.log("Todo.js ~ ", props);
 
-function Todo({ todo, dispatch }) {
-    const toggleCompleted = () => {
-        dispatch({
-            type: 'TOGGLE_COMPLETED',
-            payload: todo.id
-        });
-    };
-
-    return (
-
-        <div
-            onClick={toggleCompleted}
-            style= {props.todo.completed ? { textDecoration: 'line-through' } : null}>
-            <p>{todo.item}</p>
-
-
-
-        </div>
-    );
+  return (
+    <div className="Todo">
+      <h3
+        className={props.item.completed ? "completed" : ""}
+        onClick={(event) => {
+          event.preventDefault();
+          props.handleComplete(props.item.id);
+        }}
+      >
+        {props.item.todo}
+      </h3>
+    </div>
+  );
 }
